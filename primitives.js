@@ -87,6 +87,24 @@ sym = Symbol("test");
 console.log(sym);
 console.log(sym.toString());
 console.log(sym.valueOf());
+// sym is immutable, but also unique like an object
+console.log("Big Int");
+var big_int = 123n;
+console.log(big_int); // Take note of the "n"
+big_int = BigInt("123");
+console.log(big_int);
+// big_int = BigInt("test");        // This code will fail!
+big_int.toLocaleString(); // BigInts have some basic methods
+// Math.round(big_int);            // BigInts are NOT numbers
+big_int += big_int;
+console.log(big_int);
+big_int = 123n;
+big_int ^= big_int;
+console.log(big_int);
+big_int = 123n;
+big_int++;
+console.log(big_int);
+big_int = 123n;
 str = null;
 console.log(typeof str); // str is no longer a string, now a "null" object
 console.log(JSON.stringify(str));

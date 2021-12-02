@@ -89,7 +89,17 @@ console.log(sym.valueOf());
 
 // sym is immutable, but also unique like an object
 
-let bignum: 
+console.log("Big Int");
+
+let big_int: bigint = 123n; console.log(big_int);     // Take note of the "n"
+big_int = BigInt("123"); console.log(big_int);
+// big_int = BigInt("test");        // This code will fail!
+big_int.toLocaleString();       // BigInts have some basic methods
+// Math.round(big_int);            // BigInts are NOT numbers
+
+big_int += big_int; console.log(big_int); big_int = 123n;
+big_int ^= big_int; console.log(big_int); big_int = 123n;
+big_int++; console.log(big_int); big_int = 123n;
 
 
 str = null;

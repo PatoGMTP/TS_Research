@@ -89,15 +89,18 @@ p();
 
 
 output.push(`
-By declaring the array like this, TSC knows the contents of each index in the array.
-This allows one to use parameters and methods naturally:
+Tuples have a weakness, in that they don't always protect against incorrect assignments:
 
+Protected:
+let tuple: [string, number] = ["Hello there", "123"];      !!! Error!, tuple cannot be [string, string] !!!
+
+Unprotected:
 let tuple: [string, number] = ["Hello there", 123];
+tuple.push(123)
 
-tuple[0].length;
-tuple[1].toString();
+The second example will run despite this violiting the tuple structure.
 
-tuple[1].length;     !!! Error! TSC knows this is a number, which doesn't have a .length !!!
+
 `);
 p();
 

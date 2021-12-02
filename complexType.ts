@@ -1,4 +1,19 @@
-//  --------- One dimentional array  ---------
+
+let topic2 = document.getElementById('topic2') as HTMLElement
+
+
+topic2.addEventListener('click',(event)=>{
+    event.preventDefault()
+    console.log("here")
+    let text_area=document.getElementById('text')as HTMLElement ;
+    // let code =document.createElement('code')
+    text_area.innerText = 'The programmer/Developer is able to creat  a new name for a type. You can think of it as an interface but this can take in primitice types, unions tuples and much more ! '
+
+})
+
+
+
+ //  --------- One dimentional array  ---------
 // zipcodes is an array of strings
 let zipcodes: string[] = ['77450', '77494', '77493', '77001'];
  
@@ -86,4 +101,4 @@ type '{make: string; model: string; year: number;}'.
 Did you mean to write 'model'?
 */
 car = {make: 'Chevrolet', model: 'Monte Carlo', year: '1995'};
-// Error: Type 'string' is not assignable to type 'number'.
+// Error: Type 'string' is not assignable to type 'number'."

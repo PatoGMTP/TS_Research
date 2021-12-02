@@ -1,3 +1,18 @@
+
+let topic6 = document.getElementById('topic6') as HTMLElement
+
+
+topic6.addEventListener('click',(event)=>{
+    event.preventDefault()
+    let text_area=document.getElementById("text")as HTMLElement ;
+    let code =document.createElement('code')
+    text_area.innerText = 'Here just not present '
+    
+
+})
+
+
+
 // Type Aliases 
 type StringOrNumber = string|number; 
 // Type aliases with an object 

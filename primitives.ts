@@ -1,4 +1,9 @@
-let str: string = "I'm a string!";
+let str: string;
+str = "I'm a string!";
+str = 'String here';
+
+let other_str: string = "Text in a variable!";
+str = `I'm also string! ${other_str}`;
 
 str.length                  // Strings have parameters
 str.toLocaleUpperCase();    // String have methods

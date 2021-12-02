@@ -17,6 +17,7 @@ console.log(typeof "123");
 let num: number;
 
 num = 10;                   // Integer
+num = 100_000_000;          // Visually Formatted Integer
 num = 3.1415;               // Float
 num = 0b11;                 // Binary
 num = 0o11;                 // Octal

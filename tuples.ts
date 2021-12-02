@@ -3,6 +3,8 @@ let tuple: [string, number] = ["Hello there", 123];
 tuple[0].length;
 tuple[1].toString();
 
+// tuple[1].length;     // Error! TSC knows this is a number, which doesn't have a .length
+
 tuple.push("Yes", 1);
 
 console.log(tuple);

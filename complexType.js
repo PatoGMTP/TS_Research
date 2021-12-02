@@ -1,4 +1,12 @@
-// One dimentional array 
+var topic2 = document.getElementById('topic2');
+topic2.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log("here");
+    var text_area = document.getElementById('text');
+    // let code =document.createElement('code')
+    text_area.innerText = 'The programmer/Developer is able to creat  a new name for a type. You can think of it as an interface but this can take in primitice types, unions tuples and much more ! ';
+});
+//  --------- One dimentional array  ---------
 // zipcodes is an array of strings
 var zipcodes = ['77450', '77494', '77493', '77001'];
 // Pushing a number to zipcodes will generate an error
@@ -8,27 +16,27 @@ console.log(zipcodes);
 zipcodes.push('77027');
 console.log("One Dimentional array: \n");
 console.log(zipcodes);
-// Generic Type for One-Dimensional Array
+//  --------- Generic Type for One-Dimensional Array ---------
 var zipcodess = ['77450', '77494', '77493', '77001'];
 console.log("One Dimentional array: " + zipcodess + '\n');
 zipcodes.push('77027');
 console.log("One Dimentional array: " + zipcodess + '\n');
-//  Empty Array Initialization
-// One-dimensional empty array
+//------------------Empty Array Initialization ------------------
+// --------- One-dimensional empty array ---------
 var axis = [];
-// Multi-dimensional empty array
+//  ---------Multi-dimensional empty array ---------
 var coordinates = [];
 axis.push('x');
 console.log(axis); // prints ["x"]
 coordinates.push([3, 5]);
 coordinates.push([7]);
 console.log(coordinates); // prints [[3, 5], [7]]
-//Tuple Type
+// ---------Tuple Type ---------
 // This is an array
 var header = ['Name', 'Age', 'Smoking', 'Salary'];
 // This is a tuple
 var profile = ['Kobe', 39, true, 150000];
-// TypeScript Enum Type
+//  ---------TypeScript Enum Type ---------
 // enum MaritalStatus {
 //     Single,
 //     Married,
@@ -40,7 +48,7 @@ var profile = ['Kobe', 39, true, 150000];
 //     MaritalStatus.Single,
 //     39
 //   ];
-// TypeScript Enum Type Variable Assignment
+// ---------TypeScript Enum Type Variable Assignment ---------
 var MaritalStatus;
 (function (MaritalStatus) {
     MaritalStatus["Single"] = "SINGLE";
@@ -50,8 +58,22 @@ var MaritalStatus;
     MaritalStatus["Widowed"] = "WIDOWED";
 })(MaritalStatus || (MaritalStatus = {}));
 ;
-// Assign a string to a string enum type
+//  --------- Assign a string to a string enum type  ---------
 var eligibility;
 //   eligibility = 'SEPARATED';
 // Error: Type '"SEPARATED"' is not assignable to type 'MaritalStatus'.
 console.log(eligibility = MaritalStatus.Widowed); // No error
+// ---------TypeScript Object Type ---------
+// Define an object type for car
+var car;
+car = { make: 'Toyota', model: 'Camry', year: 2020 }; // No error
+// car = {make: 'Nissan', mode: 'Sentra', year: 2019};
+/*
+Error: Type '{make: string; mode: string; year: number;}' is not assignable to
+type '{make: string; model: string; year: number;}'.
+Object literal may only specify known properties, but 'mode' does not exist in
+type '{make: string; model: string; year: number;}'.
+Did you mean to write 'model'?
+*/
+// car = {make: 'Chevrolet', model: 'Monte Carlo', year: '1995'};
+// Error: Type 'string' is not assignable to type 'number'.

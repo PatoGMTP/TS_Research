@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,68 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav class ="nav">Code Hero</nav>
+    <nav class="nav">Code Hero</nav>
     <div class="main">
-        
+
         <div class="topic_bar">
             <button class="topic1">Primitive types</button>
-            <button class="topic2">Complex types</button>
+            <button id='topic2' class="topic2"> Complex types</button>
             <button class="topic3">Type inference </button>
-            <button class="topic3">Union Types </button>
-            <button class="topic3">Tuples </button>
-            <button class="topic3">Suprise</button>
+            <button id='topic4' class="topic4">Union Types </button>
+            <button class="topic5">Tuples </button>
+            <button id='topic6' class="topic6">Type Aliases</button>
+            <button class="topic7">Suprise</button>
         </div>
         <div class="content">
-            <textarea name="stuff" id="" cols="30" rows="10">
+        <!-- <div class = "container"> -->
+            <textarea name="stuff" id="text" cols="30" rows="10">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut efficitur lacus. Praesent ultricies at nulla vel pulvinar. Cras non enim ac felis semper gravida ac non nisi. Nam pretium ac augue et varius. Nullam varius elit fringilla, tincidunt lacus nec, pellentesque leo. Suspendisse euismod eros sit amet interdum mollis. Nullam faucibus magna in diam lacinia, id porta sem euismod. Ut pulvinar neque vitae purus hendrerit faucibus. Vivamus et eleifend tortor. Sed facilisis sem arcu, et mattis dui elementum at. Aenean imperdiet justo at nisl porttitor, id tempus ligula lobortis.
             </textarea>
+            
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img id="image1" src="" width="50%">
+                    <!-- <div class="text">Test 1 </div> -->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2/ 3</div>
+                    <img id="image2" src="" width="50%">
+                    <!-- <div class="text">Test 1 </div> -->
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3/ 3</div>
+                    <img id="image3" src="" width="50%">
+                    <!-- <div class="text">Test 1 </div> -->
+                </div>
+
+                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+            </div>
+        
+            <br>
+
+            <!-- The dots/circles
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div> -->
         </div>
     </div>
-    <footer style= "background-color: bisque; border-radius: 20px; width: 50%; text-align: center; margin: auto;">
+</div>
+
+
+    <footer style="background-color: bisque; border-radius: 20px; width: 50%;">
         Made with <span style="color: #e25555;">&#9829;</span> love by Code Hero
-        Made with <span style="color: #e25555;">&hearts;</span> love by Code Hero
+        <!-- Made with <span style="color: #e25555;">&hearts;</span> love by Code Hero -->
     </footer>
-    <script src="main.js"></script>
+    <script src="typeAliases.js"></script>
+    <script src="union.js"></script>
+    <script src="complexType.js"></script>
+
 </body>
+
 </html>

@@ -1,3 +1,10 @@
+var topic6 = document.getElementById('topic6');
+topic6.addEventListener('click', function (event) {
+    event.preventDefault();
+    var text_area = document.getElementById("text");
+    var code = document.createElement('code');
+    text_area.innerText = 'Here just not present ';
+});
 var user = {
     name: 'joe',
     id: 2316736

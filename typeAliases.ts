@@ -5,9 +5,30 @@ let topic6 = document.getElementById('topic6') as HTMLElement
 topic6.addEventListener('click',(event)=>{
     event.preventDefault()
     let text_area=document.getElementById("text")as HTMLElement ;
-    let code =document.createElement('code')
-    text_area.innerText = 'Here just not present '
+    text_area.innerText = 'The programmer/Developer is able to creat a new name for a type. You can think of it as an interface but this can take in primitice types, unions tuples and much more !  '
+    let image1 = document.getElementById('image1') as HTMLImageElement;
+    let image2 = document.getElementById('image2') as HTMLImageElement;
+    let image3 = document.getElementById('image3') as HTMLImageElement;
     
+    image1.src = 'images/TypeAliases.png';
+    image2.src = 'images/logDetails.png';
+    image3.src = 'images/Greetings.png';
+    
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+    }
+
 
 })
 
@@ -27,20 +48,21 @@ let user ={
 }
 
 // With no type Aliases 
-// const logDetails= (user: string , id: string| number)  => {
-//     console.log(`Hey ${user} your id is ${id}`)
-// }
+const logDetails= (user: string , id: string| number)  => {
+    console.log(`Hey ${user} your id is ${id}`)
+}
 
-const logDetails= (user: StringOrNumber , id: StringOrNumber)  => {
+// With type Aliases
+const logDetailss = (user: StringOrNumber , id: StringOrNumber)  => {
     console.log(`Hey ${user} your id is ${id}`)
 }
 
 //Object with no type Aliases 
-// const  greetings = (user: {name: string, id: string|number}) => {
-//     console.log(`Hey ${user.name} your partner numbers is US${user.id}`)
-// }
+const  greetings = (user: {name: string, id: string|number}) => {
+    console.log(`Hey ${user.name} your partner numbers is US${user.id}`)
+}
 
-const  greetings = (user: objWithName) => {
+const  greetingss = (user: objWithName) => {
     console.log(`Hey ${user.name} your partner numbers is ${user.id}`)
 }
 

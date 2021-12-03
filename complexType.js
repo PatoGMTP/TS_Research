@@ -1,10 +1,32 @@
 var topic2 = document.getElementById('topic2');
+var image2 = document.getElementById('image2');
 topic2.addEventListener('click', function (event) {
     event.preventDefault();
-    console.log("here");
+    var image1 = document.getElementById('image1');
+    var image2 = document.getElementById('image2');
+    var image3 = document.getElementById('image3');
+    // console.log("here")
     var text_area = document.getElementById('text');
     // let code =document.createElement('code')
-    text_area.innerText = 'The programmer/Developer is able to creat  a new name for a type. You can think of it as an interface but this can take in primitice types, unions tuples and much more ! ';
+    text_area.innerHTML = "- TypeScript Type for One-dimensional Array &#13;&#10; -TypeScript Generic Type for One-Dimensional Array &#13;&#10; -TypeScript Empty Array Initialization &#13;&#10; -TypeScript Tuple Type ";
+    image1.src = 'images/ObjTypeCT.png';
+    image2.src = 'images/complexType1.png';
+    image3.src = 'images/complexType2.png';
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+    }
 });
 //  --------- One dimentional array  ---------
 // zipcodes is an array of strings
@@ -76,4 +98,4 @@ type '{make: string; model: string; year: number;}'.
 Did you mean to write 'model'?
 */
 // car = {make: 'Chevrolet', model: 'Monte Carlo', year: '1995'};
-// Error: Type 'string' is not assignable to type 'number'.
+// Error: Type 'string' is not assignable to type 'number'."

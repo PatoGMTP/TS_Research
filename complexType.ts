@@ -1,13 +1,37 @@
 
 let topic2 = document.getElementById('topic2') as HTMLElement
+let image2 = document.getElementById('image2') as HTMLImageElement
 
 
 topic2.addEventListener('click',(event)=>{
     event.preventDefault()
-    console.log("here")
+    let image1 = document.getElementById('image1') as HTMLImageElement;
+    let image2 = document.getElementById('image2') as HTMLImageElement;
+    let image3 = document.getElementById('image3') as HTMLImageElement;
+    // console.log("here")
     let text_area=document.getElementById('text')as HTMLElement ;
     // let code =document.createElement('code')
-    text_area.innerText = 'The programmer/Developer is able to creat  a new name for a type. You can think of it as an interface but this can take in primitice types, unions tuples and much more ! '
+    text_area.innerHTML = `- TypeScript Type for One-dimensional Array &#13;&#10; -TypeScript Generic Type for One-Dimensional Array &#13;&#10; -TypeScript Empty Array Initialization &#13;&#10; -TypeScript Tuple Type `;
+    image1.src = 'images/ObjTypeCT.png';
+    image2.src = 'images/complexType1.png';
+    image3.src = 'images/complexType2.png';
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+    }
+
+
 
 })
 
@@ -92,7 +116,7 @@ let profile: [string, number, boolean, number] = ['Kobe', 39, true, 150000];
 let car: {make: string, model: string, year: number};
  
 car = {make: 'Toyota', model: 'Camry', year: 2020}; // No error
-car = {make: 'Nissan', mode: 'Sentra', year: 2019};
+// car = {make: 'Nissan', mode: 'Sentra', year: 2019};
 /*
 Error: Type '{make: string; mode: string; year: number;}' is not assignable to
 type '{make: string; model: string; year: number;}'.
@@ -100,5 +124,5 @@ Object literal may only specify known properties, but 'mode' does not exist in
 type '{make: string; model: string; year: number;}'.
 Did you mean to write 'model'?
 */
-car = {make: 'Chevrolet', model: 'Monte Carlo', year: '1995'};
+// car = {make: 'Chevrolet', model: 'Monte Carlo', year: '1995'};
 // Error: Type 'string' is not assignable to type 'number'."

@@ -8,8 +8,8 @@ topic4.addEventListener('click', function (event) {
     var text_area = document.getElementById('text');
     text_area.innerText = 'Union Types: Allows the programmer to use more than one data type for a variable ';
     image1.src = 'images/Union.png';
-    image2.src = 'images/complexType1.png';
-    image3.src = 'images/complexType2.png';
+    image2.src = 'images/UnionOk.png';
+    image3.src = 'images/NotOkUnion.png';
     var slideIndex = 0;
     showSlides();
     function showSlides() {
@@ -23,7 +23,7 @@ topic4.addEventListener('click', function (event) {
             slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 10000); // Change image every 2 seconds
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
     }
 });
 // Ok Use of Union 

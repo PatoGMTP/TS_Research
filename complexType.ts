@@ -1,4 +1,4 @@
-export function complexType()
+export function complexType(terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number})
 {
   let topic2 = document.getElementById('topic2') as HTMLElement
   let image2 = document.getElementById('image2') as HTMLImageElement

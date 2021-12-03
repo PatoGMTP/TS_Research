@@ -6,13 +6,6 @@ import {typeAliases} from './typeAliases.js';
 import {typeInference} from './typeInference.js';
 import {union} from './union.js';
 
-primitives();
-tuples();
-complexType();
-typeAliases();
-typeInference();
-union();
-
 
 const text_area: HTMLTextAreaElement = document.getElementById("terminal") as HTMLTextAreaElement;
 const arr: string[] = []
@@ -25,3 +18,12 @@ text_area.addEventListener("keydown", evt => {
         text_area.value = arr[index];
     }
 });
+
+const terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number} = {text_area: text_area, arr: arr, index: index};
+
+primitives(terminal);
+tuples(terminal);
+complexType(terminal);
+typeAliases(terminal);
+typeInference(terminal);
+union(terminal);

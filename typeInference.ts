@@ -1,4 +1,4 @@
-export function typeInference()
+export function typeInference(terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number})
 {
     let item;
     

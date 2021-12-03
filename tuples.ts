@@ -1,4 +1,4 @@
-export function tuples()
+export function tuples(terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number})
 {
     let tuple_topic = document.getElementById('topic5') as HTMLElement
     

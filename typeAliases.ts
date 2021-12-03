@@ -1,4 +1,4 @@
-export function typeAliases()
+export function typeAliases(terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number})
 {
     let topic6 = document.getElementById('topic6') as HTMLElement
     

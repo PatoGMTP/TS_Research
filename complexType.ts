@@ -31,10 +31,57 @@ export function complexType(terminal: {text_area: HTMLTextAreaElement, arr: stri
           slides[slideIndex - 1].style.display = "block";
           setTimeout(showSlides, 8000); // Change image every 2 seconds
       }
+      terminal.arr.length = 0;
+  
+      terminal.arr.push(`
+  Topic: Complex Types
+  //  --------- One dimentional array  ---------
+  // zipcodes is an array of strings
+  let zipcodes: string[] = ['77450', '77494', '77493', '77001'];
+  
+  // Pushing a number to zipcodes will generate an error
+  // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+     console.log("One Dimentional array: \n");
+     console.log(zipcodes)
+     zipcodes.push('77027');
+     console.log("One Dimentional array: \n");
+     console.log(zipcodes)
+      `);
+  
+      
+      
+      terminal.arr.push(`
+      //  --------- Generic Type for One-Dimensional Array ---------
+      let zipcodess: Array<string> = ['77450', '77494', '77493', '77001'];
+      console.log("One Dimentional array: "+ zipcodess +'\n');
+      zipcodes.push('77027');
+      console.log("One Dimentional array: "+ zipcodess +'\n');
+      `);
+      
+          terminal.arr.push(`
+      //------------------Empty Array Initialization ------------------
+      
+      // --------- One-dimensional empty array ---------
+      let axis: string[] = [];
+      
+      //  ---------Multi-dimensional empty array ---------
+      let coordinates: number[][] = [];
+      
+      axis.push('x');
+      console.log(axis);        // prints ["x"]
+      
+      coordinates.push([3, 5]);
+      coordinates.push([7]);
+      console.log(coordinates); // prints [[3, 5], [7]]
+          `);
+  
+      terminal.text_area.value = terminal.arr[0];
   
   
   
   })
+
+  topic2.dispatchEvent(new Event("click"));
   
   
   
@@ -127,4 +174,5 @@ export function complexType(terminal: {text_area: HTMLTextAreaElement, arr: stri
   */
   // car = {make: 'Chevrolet', model: 'Monte Carlo', year: '1995'};
   // Error: Type 'string' is not assignable to type 'number'."
+
 }

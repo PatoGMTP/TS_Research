@@ -99,7 +99,7 @@ li.dropdown {
     padding: 10px;
     background-clip: content-box;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .boxes

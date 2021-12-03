@@ -16,6 +16,38 @@ export function tuples(terminal) {
         slides[0].style.display = "block";
         slides[1].style.display = "none";
         slides[2].style.display = "none";
+        terminal.arr.length = 0;
+        terminal.arr.push(`
+    Topic Tuples:
+    
+    The following is a tuple of two different types, a string and number:
+    
+    let tuple: [string, number] = ["Hello there", 123];
+        `);
+        terminal.arr.push(`
+    By declaring the array like this, TSC knows the contents of each index in the array.
+    This allows one to use parameters and methods naturally:
+    
+    let tuple: [string, number] = ["Hello there", 123];
+    
+    tuple[0].length;
+    tuple[1].toString();
+    
+    tuple[1].length;     !!! Error! TSC knows this is a number, which doesn't have a .length !!!
+        `);
+        terminal.arr.push(`
+    Tuples have a weakness, in that they don't always protect against incorrect assignments:
+    
+    Protected:
+    let tuple: [string, number] = ["Hello there", "123"];      !!! Error!, tuple cannot be [string, string] !!!
+    
+    Unprotected:
+    let tuple: [string, number] = ["Hello there", 123];
+    tuple.push(123)
+    
+    The second example will run despite this violiting the tuple structure.
+        `);
+        terminal.text_area.value = terminal.arr[0];
     });
     let tuple = ["Hello there", 123];
     tuple[0].length;

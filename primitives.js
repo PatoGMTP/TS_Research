@@ -1,4 +1,147 @@
 export function primitives(terminal) {
+    let tuple_topic = document.getElementById('topic1');
+    tuple_topic.addEventListener('click', (event) => {
+        console.log("YES");
+        event.preventDefault();
+        let image1 = document.getElementById('image1');
+        let image2 = document.getElementById('image2');
+        let image3 = document.getElementById('image3');
+        console.log("here");
+        let text_area = document.getElementById('text');
+        text_area.innerText = 'Tuples: Allows the programmer to declare specific array contents using types';
+        image1.src = 'images/tuples.png';
+        image2.src = 'images/tuples.png';
+        image3.src = 'images/tuples.png';
+        var slides = document.getElementsByClassName("mySlides");
+        slides[0].style.display = "block";
+        slides[1].style.display = "none";
+        slides[2].style.display = "none";
+        terminal.arr.length = 0;
+        terminal.arr.push(`
+Topic: Primitives in TS
+
+There are 7 primitives in JS/TS:
+
+3 "Everyday": Number, String, Boolean
+2 "Annoying": Null, Undefined
+2 "Rare": BigInt, Symbol
+    `);
+        terminal.arr.push(`
+Strings!
+
+let str: string;
+str = 'I am a string!';
+str = 'String here';
+
+let other_str: string = "Text in a variable!";
+str = \`I'm also string! \${other_str}\`;
+
+str.length                  // Strings have parameters
+str.toLocaleUpperCase();    // String have methods
+parseInt(str);              // Certain functions take in strings
+    `);
+        terminal.arr.push(`
+Numbers
+
+let num: number;
+
+num = 10;                   // Integer
+num = 100_000_000;          // Visually Formatted Integer
+num = 3.1415;               // Float
+num = 0b11;                 // Binary
+num = 0o11;                 // Octal
+num = 0x11;                 // Hex
+num = 123e-1;               // Scientific format
+num = NaN;                  // NaN is a special global number
+num = Infinity;             // Infinity is a special global number
+num = -Infinity;            // Any number can be made negative
+
+// Whenever special numbers are used in arithmetic expressions, they take priority over other numbers.
+// If there is an arithmetic expression with more than one special number, NaN wins out.
+    `);
+        terminal.arr.push(`
+
+!// Number operators: +, -, *, /, %  which takes in 2 args, and ++, --  which take 1
+// Bitwise operators: &, |, ^  which take in 2 args, and  ~, <<, >>, >>>  which take 1
+
+num = +"text";          // num === NaN
+num = -"text";          // num === NaN
+num = +"123";           // num === 123
+num = -"123";           // num === -123
+
+ANY operator that takes in 2 arguments can be used in the "arg"= style:
+
+num += num;
+num |= num;
+    `);
+        terminal.arr.push(`
+Booleans!
+
+let bool: boolean = true;
+console.log(bool.valueOf());            // Booleans only have one method
+console.log(JSON.stringify(bool));
+if (bool) bool = !bool;
+
+// Logical operators: && || !
+bool = !!str;                           // str converts to "true";
+bool = !!num;
+    `);
+        terminal.arr.push(`
+Symbols!
+
+let sym: Symbol = Symbol();
+sym = Symbol("test"); 
+
+sym.toString();
+sym.valueOf();
+
+Symbols are used to generate unique values. They function similar
+to objects in that they have unique IDs in memory:
+
+Symbol() === Symbol() resolves to false!
+    `);
+        terminal.arr.push(`
+BigInts!
+    
+let big_int: bigint = 123n;         // Take note of the "n"
+big_int = BigInt("123");
+big_int = BigInt("test");        // This code will fail!
+
+big_int.toLocaleString();       // BigInts have some basic methods
+
+Math.round(big_int);      !!! ERROR !!!  BigInts are NOT numbers
+
+big_int += big_int;
+big_int ^= big_int;
+big_int++;
+
+String conversions: +"123" or -"123"  do NOT work for BigInts!
+    `);
+        terminal.arr.push(`
+Null and Undefined!
+
+str = null;             // str is no longer a string, now a "null" object
+str = undefined;        // str is specifically type "undefined" now
+str = "hello!";         // str is a string again
+
+num = null;             // Assigning "null" assigns converts num to a "null" object
+num = -num;             // Numerically, "null" is "equal" to 0, so num is now -0
+
+function custom1(input: string): number
+{
+    return null;
+}
+
+function custom2(input: string): number
+{
+    return;
+}
+
+All of this code will work in TS, IF the settings are not "strict".
+If they are strict, the code above will complain about null and undefined values!
+    `);
+        terminal.text_area.value = terminal.arr[0];
+    });
     let str;
     str = "I'm a string!";
     str = 'String here';

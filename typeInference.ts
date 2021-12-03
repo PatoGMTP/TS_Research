@@ -10,7 +10,11 @@ export function typeInference(terminal: {text_area: HTMLTextAreaElement, arr: st
         let image3 = document.getElementById('image3') as HTMLImageElement;
         console.log("here")
         let text_area = document.getElementById('text') as HTMLTextAreaElement;
-        text_area.innerText = 'Tuples: Allows the programmer to declare specific array contents using types'
+        text_area.innerText = 'By default, TSC will always try to guess the type of variables.';
+        text_area.innerHTML += `&#13;&#10;`;
+        text_area.innerText = 'This usually happens in 2 (really 3 or 4!) key places:';
+        text_area.innerHTML += `&#13;&#10;`;
+        text_area.innerText = 'Variable Initialization and Function Return';
         image1.src = 'images/tuples.png';
         image2.src = 'images/tuples.png';
         image3.src = 'images/tuples.png';
@@ -38,7 +42,7 @@ thing = "string";       !!! ERROR !!! thing has been determined to be number!
 
 
     terminal.arr.push(`
-Type inference happens in 3 key places:
+Type inference happens in 3 (sometimes 4!) key places:
 
 Initialization (as well as during declaration!):
 let thing = 5;

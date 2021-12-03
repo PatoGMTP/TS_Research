@@ -8,7 +8,13 @@ export function primitives(terminal) {
         let image3 = document.getElementById('image3');
         console.log("here");
         let text_area = document.getElementById('text');
-        text_area.innerText = 'Tuples: Allows the programmer to declare specific array contents using types';
+        text_area.innerHTML = `7 total: string, number, boolean, null, undefined, bigint, symbol`;
+        text_area.innerHTML += `&#13;&#10;`;
+        text_area.innerHTML += `All of these are immutable, although only 6 are always identical:`;
+        text_area.innerHTML += `&#13;&#10;`;
+        text_area.innerHTML += `Symbol() is used to generate unique Symbols with the same input!`;
+        text_area.innerHTML += `&#13;&#10;`;
+        text_area.innerHTML += `In TS, the TSConfig plays a huge role in what is fine for primitives`;
         image1.src = 'images/tuples.png';
         image2.src = 'images/tuples.png';
         image3.src = 'images/tuples.png';

@@ -9,7 +9,3 @@ text_area.addEventListener("keydown", evt => {
         text_area.value = arr[index];
     }
 });
-
-const terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number} = {text_area: text_area, arr: arr, index: index};
-
-export {terminal}

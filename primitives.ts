@@ -1,4 +1,4 @@
-export function primitives()
+export function primitives(terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number})
 {
 
     let str: string;

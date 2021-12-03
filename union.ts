@@ -1,4 +1,4 @@
-export function union()
+export function union(terminal: {text_area: HTMLTextAreaElement, arr: string[], index: number})
 {
     let topic4 = document.getElementById('topic4') as HTMLElement
     

@@ -1,4 +1,4 @@
-export function typeAliases() {
+export function typeAliases(terminal) {
     let topic6 = document.getElementById('topic6');
     topic6.addEventListener('click', (event) => {
         event.preventDefault();

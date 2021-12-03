@@ -1,4 +1,4 @@
-export function tuples() {
+export function tuples(terminal) {
     let tuple_topic = document.getElementById('topic5');
     tuple_topic.addEventListener('click', (event) => {
         console.log("YES");

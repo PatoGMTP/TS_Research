@@ -1,4 +1,4 @@
-export function typeInference() {
+export function typeInference(terminal) {
     let item;
     item = 5;
     item.toString();

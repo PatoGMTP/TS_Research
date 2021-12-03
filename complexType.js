@@ -1,4 +1,4 @@
-export function complexType() {
+export function complexType(terminal) {
     let topic2 = document.getElementById('topic2');
     let image2 = document.getElementById('image2');
     topic2.addEventListener('click', (event) => {

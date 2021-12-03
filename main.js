@@ -5,12 +5,6 @@ import { complexType } from './complexType.js';
 import { typeAliases } from './typeAliases.js';
 import { typeInference } from './typeInference.js';
 import { union } from './union.js';
-primitives();
-tuples();
-complexType();
-typeAliases();
-typeInference();
-union();
 const text_area = document.getElementById("terminal");
 const arr = [];
 let index = 0;
@@ -20,3 +14,10 @@ text_area.addEventListener("keydown", evt => {
         text_area.value = arr[index];
     }
 });
+const terminal = { text_area: text_area, arr: arr, index: index };
+primitives(terminal);
+tuples(terminal);
+complexType(terminal);
+typeAliases(terminal);
+typeInference(terminal);
+union(terminal);

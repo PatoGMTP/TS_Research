@@ -1,4 +1,4 @@
-export function primitives() {
+export function primitives(terminal) {
     let str;
     str = "I'm a string!";
     str = 'String here';

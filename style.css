@@ -66,11 +66,11 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-button {
+button{
   border-radius: 20px;
 }
 button:hover{
-  background-color:orange
+  background-color:orange;
 }
 /* ------------Navigation dropdown bar-----------------*/
 
@@ -100,7 +100,7 @@ button:hover{
 
 .content
 {
-    background-color: lightgreen;
+    background-color: orange;
     padding: 10px;
     background-clip: content-box;
     display: grid;
